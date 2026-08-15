@@ -1,0 +1,10 @@
+flowchart TD
+    A[Telegram message] --> B[Telegram trigger]
+    B --> C{Has voice?}
+    C -- yes --> D[Get voice file]
+    D --> E[Set audio metadata]
+    E --> F[Groq Whisper<br/>speech to text]
+    C -- no --> G[Edit fields<br/>extract text]
+    F --> H[Groq LLM chain<br/>openai/gpt-oss-20b]
+    G --> H
+    H --> I[Telegram reply]
