@@ -1,0 +1,34 @@
+# Secrets / credentials
+*.env
+.env
+.env.*
+*.key
+*.pem
+credentials.json
+secrets.json
+
+# n8n
+.n8n/
+n8n_data/
+*.n8n.backup
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# Local exports that may contain live credentials
+*-export.json
+workflow-export*.json
+My_workflow.json
